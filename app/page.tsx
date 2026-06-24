@@ -99,7 +99,7 @@ function SectionHeader({
   return (
     <div className="flex flex-col items-center text-center gap-5 mb-20">
       {/* Badge pill */}
-      <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[rgba(200,169,110,0.3)] bg-[rgba(200,169,110,0.06)] text-[10px] font-semibold tracking-[0.35em] uppercase text-[var(--accent)]">
+      <span className="inline-flex items-center justify-center gap-2 px-auto py-auto rounded-full border border-[rgba(200,169,110,0.3)] bg-[rgba(200,169,110,0.06)] text-[10px] font-semibold tracking-[0.35em] uppercase text-[var(--accent)]">
         {badge}
       </span>
       {/* Heading */}
@@ -161,12 +161,12 @@ export default function Home() {
         {/* Links */}
         <ul className="hidden md:flex items-center gap-10 text-[11px] tracking-[0.2em] uppercase text-zinc-500">
           {[
-            ["#about",   "Tentang"],
-            ["#visi",    "Visi"],
-            ["#misi",    "Misi"],
+            ["#about", "Tentang"],
+            ["#visi", "Visi"],
+            ["#misi", "Misi"],
             ["#layanan", "Layanan"],
-            ["#tim",     "Tim"],
-            ["#kontak",  "Kontak"],
+            ["#tim", "Tim"],
+            ["#kontak", "Kontak"],
           ].map(([href, label]) => (
             <li key={href}>
               <a
@@ -201,7 +201,7 @@ export default function Home() {
       {/* ════════════════════════════════════════════════════════════════════ */}
       <section
         id="about"
-        className="relative py-32 md:py-44 px-6 md:px-12 lg:px-16 overflow-hidden"
+        className="relative flex flex-col items-center justify-center px-6 md:px-12 lg:px-16 overflow-hidden"
         style={{ background: "var(--background)" }}
       >
         {/* Subtle radial glow */}
@@ -249,10 +249,10 @@ export default function Home() {
             {/* Right: stats 2×2 grid */}
             <div className="grid grid-cols-2 gap-5">
               {[
-                { value: "15+",    label: "Tahun Berpengalaman", sub: "Sejak 2009" },
-                { value: "2,400+", label: "Unit Terjual",        sub: "Dan terus bertambah" },
-                { value: "98%",    label: "Kepuasan Pelanggan",  sub: "Berdasarkan survei" },
-                { value: "50+",    label: "Brand Premium",       sub: "Tersedia di showroom" },
+                { value: "15+", label: "Tahun Berpengalaman", sub: "Sejak 2009" },
+                { value: "2,400+", label: "Unit Terjual", sub: "Dan terus bertambah" },
+                { value: "98%", label: "Kepuasan Pelanggan", sub: "Berdasarkan survei" },
+                { value: "50+", label: "Brand Premium", sub: "Tersedia di showroom" },
               ].map((s) => (
                 <div
                   key={s.label}
@@ -298,7 +298,7 @@ export default function Home() {
       {/* ════════════════════════════════════════════════════════════════════ */}
       <section
         id="visi"
-        className="relative py-32 md:py-44 px-6 md:px-12 lg:px-16 overflow-hidden"
+        className="relative flex flex-col items-center justify-center px-6 md:px-12 lg:px-16 overflow-hidden"
         style={{
           background:
             "linear-gradient(180deg, var(--surface) 0%, var(--background) 100%)",
@@ -326,7 +326,7 @@ export default function Home() {
         <div className="relative max-w-4xl mx-auto">
           <SectionHeader badge="Our Vision" title={<>Visi <GoldText>Kami</GoldText></>} />
 
-            {/* konteiner card */}
+          {/* konteiner card */}
           <div className="flex flex-col gap-6">
             {visiItems.map((item) => (
               <div
@@ -369,7 +369,7 @@ export default function Home() {
       {/* ════════════════════════════════════════════════════════════════════ */}
       <section
         id="misi"
-        className="relative py-32 md:py-44 px-6 md:px-12 lg:px-16 overflow-hidden"
+        className="relative flex flex-col items-center justify-center px-6 md:px-12 lg:px-16 overflow-hidden"
         style={{ background: "var(--background)" }}
       >
         {/* Ambient glow */}
@@ -446,7 +446,7 @@ export default function Home() {
       {/* ════════════════════════════════════════════════════════════════════ */}
       <section
         id="nilai"
-        className="relative py-32 md:py-44 px-6 md:px-12 lg:px-16 overflow-hidden"
+        className="relative flex flex-col items-center justify-center pt-32 md:pt-44 pb-20 px-6 md:px-12 lg:px-16 overflow-hidden border-t border-zinc-800/50 mt-10 md:mt-20"
         style={{
           background:
             "linear-gradient(180deg, var(--surface) 0%, var(--surface-2) 100%)",
@@ -523,7 +523,7 @@ export default function Home() {
       {/* ════════════════════════════════════════════════════════════════════ */}
       <section
         id="layanan"
-        className="relative py-32 md:py-44 px-6 md:px-12 lg:px-16 overflow-hidden"
+        className="relative flex flex-col items-center justify-center pt-32 md:pt-44 pb-20 px-6 md:px-12 lg:px-16 overflow-hidden border-t border-zinc-800/50 mt-10 md:mt-20"
         style={{ background: "var(--background)" }}
       >
         {/* Ghost watermark */}
@@ -590,11 +590,11 @@ export default function Home() {
       </section>
 
       {/* ════════════════════════════════════════════════════════════════════ */}
-      {/* SECTION: TIM (Team)                                                 */}
+      {/* SECTION: TIM (Team)                                                  */}
       {/* ════════════════════════════════════════════════════════════════════ */}
       <section
         id="tim"
-        className="relative py-32 md:py-44 px-6 md:px-12 lg:px-16 overflow-hidden"
+        className="relative flex flex-col items-center justify-center pt-32 md:pt-44 pb-20 px-6 md:px-12 lg:px-16 overflow-hidden border-t border-zinc-800/50 mt-10 md:mt-20"
         style={{
           background:
             "linear-gradient(180deg, var(--surface) 0%, var(--background) 100%)",
@@ -679,7 +679,7 @@ export default function Home() {
       {/* ════════════════════════════════════════════════════════════════════ */}
       <section
         id="kontak"
-        className="relative py-32 md:py-44 px-6 md:px-12 lg:px-16 overflow-hidden"
+        className="relative flex flex-col items-center justify-center px-6 md:px-12 lg:px-16 overflow-hidden"
         style={{ background: "var(--background)" }}
       >
         {/* Ambient glow */}
@@ -697,7 +697,7 @@ export default function Home() {
           aria-hidden="true"
         />
 
-        <div className="relative max-w-5xl mx-auto text-center">
+        <div className="relative max-w-5xl mx-auto text-center flex flex-col gap-5">
           <SectionHeader
             badge="Get In Touch"
             title={<>Siap Menemukan <GoldText>Kendaraan Impian?</GoldText></>}
@@ -705,7 +705,7 @@ export default function Home() {
           />
 
           {/* Contact info cards */}
-          <div className="grid sm:grid-cols-3 gap-6 mb-14">
+          <div className="grid sm:grid-cols-3 gap-6">
             {[
               {
                 icon: "📍",
