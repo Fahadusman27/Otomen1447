@@ -1,6 +1,3 @@
-"use client";
-
-import * as React from "react";
 import { MotionCarousel } from "@/components/animate-ui/components/community/motion-carousel";
 
 // ─── Static data ──────────────────────────────────────────────────────────────
