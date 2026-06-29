@@ -1,28 +1,29 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'});
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const outfit = Outfit({
   subsets: ["latin"],
+  variable: "--font-outfit",
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
-  title: "Otomen Automotive | Premium Car Dealership",
+  title: "Otomen1447 — Drive Your Dream, Seamlessly",
   description:
-    "Otomen Automotive — your trusted premium car dealership. Explore our curated collection of luxury and performance vehicles with unmatched customer service.",
-  keywords: ["car dealership", "luxury cars", "automotive", "premium vehicles", "otomen"],
+    "Premium automotive agency offering new car promotions, certified used cars, trade-in assistance, and auto financing. Trusted by 2,400+ satisfied clients.",
+  keywords: "automotive agency, car dealership, new cars, certified used cars, auto financing, trade-in",
   openGraph: {
-    title: "Otomen Automotive | Premium Car Dealership",
-    description: "Your trusted premium car dealership. Explore luxury and performance vehicles.",
+    title: "Otomen1447 — Drive Your Dream, Seamlessly",
+    description:
+      "Premium automotive experiences crafted with integrity. From thrilling new models to certified pre-owned excellence.",
     type: "website",
   },
 };
@@ -34,10 +35,10 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="id"
-      className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", inter.variable)}
+      lang="en"
+      className={`${inter.variable} ${outfit.variable}`}
     >
-      <body className="min-h-full flex flex-col bg-[var(--background)] text-[var(--foreground)]">
+      <body className="min-h-screen bg-slate-950 antialiased font-outfit">
         {children}
       </body>
     </html>
